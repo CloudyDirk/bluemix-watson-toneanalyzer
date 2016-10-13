@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+<title>IBM Watson Tone Analyzer</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<p/>
+<div><b>IBM Watson Tone Analyzer</b></div>
+<p/>
+<form method="post" action="./tone">
+<div>Enter <i>plain</i> text to be analyzed.</div>
+<p/>
+<div><textarea id="text" name="text" rows="25" cols="75"></textarea></div>
+<p/>
+<div><input type="submit" value="Submit" /></div>
+</form>
+</body>
 </html>

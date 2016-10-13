@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IBM Watson Tone Analyzer</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<p/>
+<div><b>IBM Watson Tone Analyzer</b></div>
+<p/>
+<div>Here are the results of your tone analysis. <a target="_blank"
+href="http://www.ibm.com/watson/developercloud/doc/tone‐analyzer/understanding­‐
+tone.shtml">Understand your tone score</a></div>
+<p/>
+<%
+var categories = document_tone.tone_categories;
+for(var i=0; i < categories.length; i++) {
+var category = categories[i];
+%>
+Create an EJS template
+Page 14 of 18
+<div><b><%= category.category_name %></b></div>
+<table style="width:250px; border:1px solid black;">
+<%
+var tones = category.tones;
+for (var j=0; j < tones.length; j++) {
+var tone = tones[j];
+%>
+<tr><td><%= tone.tone_name %></td><td><%= tone.score %></td></tr>
+<% } %>
+</table>
+<p/>
+<% } %>
+</body>
+</html>
